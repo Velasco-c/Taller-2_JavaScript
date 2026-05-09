@@ -11,6 +11,102 @@ body {
   position: relative;
   box-sizing: border-box;
 }
+/* ===== buscador / header ========== */
+:root {
+  --bg-matrix: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10' y='20' font-family='monospace' font-size='10' fill='%2300ff00' opacity='0.3'%3E010110%3C/text%3E%3Ctext x='150' y='50' font-family='monospace' font-size='10' fill='%2300ff00' opacity='0.3'%3EFF:A2%3C/text%3E%3Ctext x='30' y='180' font-family='monospace' font-size='10' fill='%2300ff00' opacity='0.3'%3E1001%3C/text%3E%3Cpath d='M0 100 Q 50 50 100 100 T 200 100' fill='none' stroke='%2300ff00' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  height: clamp(60px, 12vh, 100px);
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #000500;
+  background-image: var(--bg-matrix);
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: clamp(100px, 20vw, 200px);
+  overflow: hidden;
+}
+
+/* === BUSCADOR === */
+.contenedor-buscador {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buscador {
+  display: flex;
+  margin: 5px auto 0;
+  max-width: 500px;
+  width: min(95%, 500px);
+  height: 50px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 0 10px 1px rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+.buscador input {
+  flex: 1;
+  height: 100%;
+  padding: 0 10px 0 20px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: rgba(230, 235, 245, 0.85);
+  font: 300 clamp(14px, 1.1vw, 18px) 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  min-width: 0;
+}
+
+.buscador input::placeholder {
+  color: rgba(230, 235, 245, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.buscador button {
+  margin-right: 15px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.buscador button img {
+  width: 18px;
+  height: 18px;
+}
+
+.buscador:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.buscador button:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+input:hover::placeholder {
+  color: #020205fb;
+}
+
+
+
 
 /* === GAMEBOY === */
 .gameboy-container {
