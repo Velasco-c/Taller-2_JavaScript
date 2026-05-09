@@ -1,0 +1,210 @@
+/* body */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  background: #051405 url("/imagenes/fondo.svg") repeat fixed;
+  background-size: clamp(150px, 30vw, 250px);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* === GAMEBOY === */
+.gameboy-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.l-r-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(200px, 40vw, 320px);
+  margin-bottom: -5px;
+  z-index: 1;
+}
+
+.l-button,
+.r-button {
+  width: clamp(50px, 10vw, 80px);
+  height: clamp(10px, 2vh, 15px);
+  background-color: #d1d1d1;
+  border: 2px solid #555;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.gameboy {
+  position: relative;
+  width: clamp(280px, 65vw, 550px);
+  height: auto;
+  aspect-ratio: 550/700;
+  background-color: #5d3596;
+  border: 2px solid #333;
+  border-radius: 15px 15px 50px 50px;
+  box-shadow: 0 10px 0 #4a2b78, 0 15px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.screen-area {
+  width: 90%;
+  background-color: #2c2c2c;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-nintendo {
+  color: #d1d1d1;
+  font: italic bold 10px monospace;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.logo-nintendo::after {
+  content: '®';
+  font-size: 8px;
+  vertical-align: super;
+}
+
+.screen-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #d1d1d1;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.power-led {
+  color: #ca0303;
+  font-size: 8px;
+}
+
+.buttons-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.dpad {
+  position: relative;
+  width: clamp(40px, 8vw, 55px);
+  height: clamp(40px, 8vw, 55px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpad-cross {
+  position: absolute;
+  background-color: #2c2c2c;
+  border-radius: 3px;
+}
+
+.up,
+.down {
+  width: clamp(12px, 2.5vw, 18px);
+  height: clamp(40px, 8vw, 55px);
+}
+
+.left,
+.right {
+  width: clamp(40px, 8vw, 55px);
+  height: clamp(12px, 2.5vw, 18px);
+}
+
+.dpad-center {
+  position: absolute;
+  width: clamp(12px, 2.5vw, 18px);
+  height: clamp(12px, 2.5vw, 18px);
+  background-color: #2c2c2c;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpad-center::after {
+  content: '';
+  width: clamp(5px, 1vw, 8px);
+  height: clamp(5px, 1vw, 8px);
+  background-color: #1a1a1a;
+  border-radius: 50%;
+}
+
+.ab-buttons {
+  display: flex;
+  gap: clamp(8px, 2vw, 12px);
+  transform: rotate(-15deg);
+  margin-right: 15px;
+}
+
+.ab-buttons button {
+  width: clamp(24px, 5vw, 32px);
+  height: clamp(24px, 5vw, 32px);
+  border: 2px solid #1a1a1a;
+  border-radius: 50%;
+  background-color: #2c2c2c;
+  color: #fff;
+  font: bold clamp(12px, 2.5vw, 16px) sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 clamp(2px, 0.5vw, 4px) 0 #1a1a1a;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.ab-buttons button:active {
+  transform: translateY(clamp(1px, 0.3vw, 2px));
+  box-shadow: 0 clamp(1px, 0.3vw, 2px) 0 #1a1a1a;
+}
+
+.a-button {
+  margin-top: clamp(-5px, -1vw, -10px);
+}
+
+.start-select-area {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: clamp(10px, 2vw, 15px);
+  transform: rotate(-15deg);
+}
+
+.start-select-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pill-button {
+  width: clamp(18px, 4vw, 25px);
+  height: clamp(5px, 1vh, 7px);
+  background-color: #2c2c2c;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+}
+
+.label {
+  color: #d1d1d1;
+  font-size: clamp(6px, 1.2vw, 7px);
+  text-transform: uppercase;
+  margin-top: clamp(2px, 0.5vh, 3px);
+}

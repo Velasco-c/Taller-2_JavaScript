@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Digivice estilo GameBoy</title>
 </head>
+
 <body>
-    
-    
+
+
+
+    <!-- gameboy -->
+    <div class="gameboy-container">
+        <!-- Gatillos superiores L y R -->
+        <div class="l-r-buttons">
+            <div class="l-button"></div>
+            <div class="r-button"></div>
+        </div>
+
+        <div class="gameboy">
+            <!-- Área de la pantalla -->
+            <div class="screen-area">
+                <div class="logo-nintendo">Nintendo</div>
+                <div class="screen" id="pantalla">
+                    <!-- Aquí iría el contenido del juego -->
+                </div>
+                <div class="screen-info">
+                    <span class="power-led">POWER ●</span>
+                    <span>GAME BOY</span>
+                </div>
+            </div>
+
+            <!-- Área de controles -->
+            <div class="buttons-area">
+                <!-- D-Pad -->
+                <div class="dpad">
+                    <div class="dpad-cross up"></div>
+                    <div class="dpad-cross down"></div>
+                    <div class="dpad-cross left"></div>
+                    <div class="dpad-cross right"></div>
+                    <div class="dpad-center"></div>
+                </div>
+
+                <!-- Botones A y B -->
+                <div class="ab-buttons">
+                    <button class="b-button">B</button>
+                    <button class="a-button">A</button>
+                </div>
+            </div>
+
+            <!-- Botones Start y Select -->
+            <div class="start-select-area">
+                <div class="start-select-btn">
+                    <div class="pill-button"></div>
+                    <div class="label">Select</div>
+                </div>
+                <div class="start-select-btn">
+                    <div class="pill-button"></div>
+                    <div class="label">Start</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
