@@ -30,6 +30,71 @@ header {
   overflow: hidden;
 }
 
+
+
+/* === PANTALLA / CARDS === */
+.screen {
+  width: 100%;
+  height: clamp(180px, 35vh, 300px);
+  background-color: #9bac9b;
+  border: 4px solid #000;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.screen::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  scroll-snap-align: center;
+}
+
+.imagenContenedor {
+  width: clamp(120px, 25vw, 200px);
+  height: 160px;
+  background: white;
+  border: 3px solid #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.imagenContenedor img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.textoContenedor {
+  margin-top: 15px;
+  font: bold 1.5rem 'Courier New', Courier, monospace;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+
 /* === BUSCADOR === */
 .contenedor-buscador {
   width: 100%;
